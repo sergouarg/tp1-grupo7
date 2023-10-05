@@ -1,127 +1,151 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Sergio Goumaz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- Styles -->
-    <style>  
+  <style>
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
 
-      .navbar-nav .nav-link{
-          color: #ffffff;
-      }
+    .navbar-nav .show>.nav-link,
+    .navbar-nav .nav-link.active {
+      color: #28a740;
+    }
 
-      .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
-          color: #ffffff;
-      }
+    #mainNav {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      background-color: #251d1b;
+      transition: background-color 0.2s ease;
+    }
+
+    #mainNav .navbar-brand {
+      font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+      color: #6c757d;
+      font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.75rem 0;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link:hover,
+    #mainNav .navbar-nav .nav-item .nav-link:active {
+      color: #fff;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link.active {
+      color: #28a740 !important;
+    }
+
+    .text-footer:hover {
+
+      color: #27a746;
+    }
+
+    .form-floating>label {
+      padding: 1rem 1rem;
+    }
+
+    @media (min-width: 992px) {
 
       #mainNav {
+        box-shadow: none;
+        background-color: transparent;
+      }
+
+      #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      #mainNav .navbar-brand:hover {
+        color: #fff;
+      }
+
+      #mainNav .navbar-nav .nav-item .nav-link {
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0 1rem;
+      }
+
+      #mainNav .navbar-nav .nav-item .nav-link:hover {
+        color: #fff;
+      }
+
+      #mainNav .navbar-nav .nav-item:last-child .nav-link {
+        padding-right: 0;
+      }
+
+      #mainNav.navbar-shrink {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         background-color: #251d1b;
-        transition: background-color 0.2s ease;
       }
-      #mainNav .navbar-brand {
-        font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        font-weight: 700;
+
+      #mainNav.navbar-shrink .navbar-brand {
         color: #ffffff;
       }
-      #mainNav .navbar-nav .nav-item .nav-link {
-        color: #6c757d;
-        font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-        font-weight: 700;
-        font-size: 0.9rem;
-        padding: 0.75rem 0;
-      }
-      #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
+
+      #mainNav.navbar-shrink .navbar-brand:hover {
         color: #fff;
       }
-      #mainNav .navbar-nav .nav-item .nav-link.active {
-        color: #28a740 !important;
+
+      #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+        color: #ffffff;
       }
 
-      .text-footer:hover{
+      #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+        color: #fff;
+      }
+    }
 
-        color:#27a746;
-      }
+    @media only screen and (max-width: 768px) {
 
-      .form-floating > label{
-        padding: 1rem 1rem;
-      }
-      @media (min-width: 992px) {
-        
-        #mainNav {
-          box-shadow: none;
-          background-color: transparent;
-        }
-        #mainNav .navbar-brand {
-          color: rgba(255, 255, 255, 0.7);
-        }
-        #mainNav .navbar-brand:hover {
-          color: #fff;
-        }
-        #mainNav .navbar-nav .nav-item .nav-link {
-          color: rgba(255, 255, 255, 0.7);
-          padding: 0 1rem;
-        }
-        #mainNav .navbar-nav .nav-item .nav-link:hover {
-          color: #fff;
-        }
-        #mainNav .navbar-nav .nav-item:last-child .nav-link {
-          padding-right: 0;
-        }
-        #mainNav.navbar-shrink {
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-          background-color: #251d1b;
-        }
-        #mainNav.navbar-shrink .navbar-brand {
-          color: #ffffff;
-        }
-        #mainNav.navbar-shrink .navbar-brand:hover {
-          color: #fff;
-        }
-        #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
-          color: #ffffff;
-        }
-        #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-          color: #fff;
-        }
-      }
+      .titular,
+      .lead {
 
-      @media only screen and (max-width: 768px) {
-        .titular, .lead{
-          
-          text-align: left !important;
+        text-align: left !important;
       }
-        }
-    
+    }
+
+
+
     p.bajada {
-    color: white;
+      color: white;
     }
 
-    .hero-bg{
-        padding-top: 10rem;
-        height: 100vh;
-        width: auto;
-        padding-bottom: calc(10rem - 4.5rem);
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(imgs/ba1.jpg);
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
+
+
+    .hero-bg {
+      padding-top: 10rem;
+      height: 100vh;
+      width: auto;
+      padding-bottom: calc(10rem - 4.5rem);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(imgs/ba1.jpg);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      margin-bottom: 2rem;
     }
 
-    .titular, .lead{
-        color: #fff;
-        text-align: right;
+    .titular, .lead {
+      color: #fff;
+      text-align: right;
     }
 
-    .titular-lugar , .lead-lugar{
-        color: #fff;
-        margin-top: 20px;
+    .titular-lugar, .lead-lugar {
+      color: #fff;
+      margin-top: 20px;
     }
 
-    .btn-hero{
+    .btn-hero {
       background-color: transparent;
       border: 1px solid #ffffff;
       padding: 10px;
@@ -129,225 +153,247 @@
       cursor: pointer;
       border-radius: 3px;
     }
+    .btn-hero-buy {
+      background-color: #27a746;
+      border: 1px solid #27a746;
+      padding: 10px;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
 
-    .btn-hero:hover{
-      background-color: #27a746; 
+    .btn-hero:hover {
+      background-color: #27a746;
       border: 1px solid #ffffff;
     }
 
-    .title-oradores{
-        text-align: center;
+
+    .title-oradores {
+      text-align: center;
     }
 
-    .bg-primario{
-        background-image: url(imgs/honolulu.jpg);
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-size: cover;
-        height: 430px;
+    .bg-primario {
+      background-image: url(imgs/honolulu.jpg);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      height: 430px;
     }
 
-    .bg-secundario{
-        background-color: #353a40;
-        height: 430px;
+    .bg-secundario {
+      background-color: #353a40;
+      height: 430px;
     }
 
-    #submitButton{
-        background-color: #96c93e;
-        color: #fff;
-        border: none;
+    #submitButton {
+      background-color: #96c93e;
+      color: #fff;
+      border: none;
     }
 
-    .bg-footer{
-        background-image: linear-gradient(to left, rgba(29,58,74,1), rgba(29,82,113,1));
-        padding: 30px;
-      }
+    .bg-footer {
+      background-image: linear-gradient(to left, rgba(29, 58, 74, 1), rgba(29, 82, 113, 1));
+      padding: 30px;
+    }
 
-      .text-footer{
-        text-decoration: none;
-        color: #fff;
-      }
+    .text-footer {
+      text-decoration: none;
+      color: #fff;
+    }
 
-      .text-footer a:hover{
-        color: #96c93e;
-      }
-    </style>
-    <title>Ejercicio Front Codo a codo</title>
+    .text-footer a:hover {
+      color: #96c93e;
+    }
+  </style>
+  <title>Ejercicio Front Codo a codo</title>
 </head>
+
 <body>
- <main class="container-fluid">   
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="imgs/codoacodo.png" alt="codoacodo" height="80">
-        </a>
-        <p class="bajada">Conf Bs As</p>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#oradores">Los oradores</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#lugar">El lugar y la fecha</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#form">Conviértete en orador</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#tickets">Comprar tickets</a>
-            </li>
-          </ul>
-        </div>
+
+  <!-- Navegacion -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="imgs/codoacodo.png" alt="codoacodo" height="80">
+      </a>
+      <p class="bajada">Conf Bs As</p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">La conferencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#oradores">Los oradores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lugar">El lugar y la fecha</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#form">Conviértete en orador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#tickets">Comprar tickets</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
-    
-    <!-- hero -->
-    <div class="container-fluid hero-bg" id="tickets">
-    <div class="container-fluid col-xxl-10 px-4 py-5 hero-text" >
-      <section class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    </div>
+  </nav>
+</header>
+
+  <!-- hero -->
+<main>
+  <div class="container-fluid hero-bg" id="tickets">
+    <div class="container col-xxl-10 px-4 py-5 hero-text">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold lh-1 mb-3 titular">Conf Bs As</h1>
-          <p class="lead">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el crecimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.<br>
+          <p class="lead">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el
+            crecimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros
+            del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti.<br>
             Te esperamos!</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="  btn-hero active px-4 me-md-2 ">Quiero ser orador</button>
-            <button type="button" class=" btn-hero px-4">Comprar tickets</button>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="button" class="btn-hero  px-4 me-md-2 ">Quiero ser orador</button>
+            <button type="button" class="btn-hero-buy px-4">Comprar tickets</button>
           </div>
         </div>
-        <div class="col-10 col-sm-8 col-lg-6">
-          
+      </div>
+    </div>
+  </div>
+  <!-- Oradores -->
+  <div class="container px-5 my-4" id="oradores">
+
+    <!-- Titulos -->
+    <div class="text-center">
+      <span>CONOCÉ A LOS </span>
+      <div class="h1 fw-light">ORADORES</div>
+
+    </div>
+
+    <div class="row row justify-content-center">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="imgs/steve.jpg" alt=""></a>
+          <div class="card-body">
+            <span class="badge text-bg-warning">Javascript</span>
+            <span class="badge text-bg-info" style="color:#fff !important;">React</span>
+            <h4 class="orador-title">
+              Steve Jobs
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis fugit corporis
+              id. Blanditiis vitae dolores, amet tempora, est non qui aut provident obcaecati fuga quos odio labore eos
+              soluta!</p>
+          </div>
         </div>
-      </section>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="imgs/bill.jpg" alt="Bill"></a>
+          <div class="card-body">
+            <span class="badge text-bg-warning">Javascript</span>
+            <span class="badge text-bg-info" style="color:#fff !important;">React</span>
+            <h4 class="orador-title">
+              Bill Gates
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis fugit corporis
+              id. Blanditiis vitae dolores, amet tempora, est non qui aut provident obcaecati fuga quos odio labore eos
+              soluta!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+          <a href="#"><img class="card-img-top" src="imgs/ada.jpeg" alt="Ada"></a>
+          <div class="card-body">
+            <span class="badge text-bg-warning">Javascript</span>
+            <span class="badge text-bg-info" style="color:#fff !important;">React</span>
+            <h4 class="orador-title">
+              Ada Lovelace
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis fugit corporis
+              id. Blanditiis vitae dolores, amet tempora, est non qui aut provident obcaecati fuga quos odio labore eos
+              soluta!</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-    <!-- Oradores -->
-    <div class="container-fluid px-5 my-4" id="oradores">
+  <!-- Lugar y Fecha -->
+  <div id="lugar">
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 bg-primario">
 
-      <!-- Page Heading -->
-      <div class="text-center">
-        <span>CONOCÉ A LOS </span>
-        <div class="h1 fw-light">ORADORES</div>
+
+        </div>
+
+        <div class="col-md-6 col-sm-12 bg-secundario">
+          <h2 class="titular-lugar">
+            Bs AS - Octubre
+
+          </h2>
+
+          <p class="lead-lugar">
+            Buenos Aires es la provincia y localidad más grande del estado de Argentina. Honolulu es la más sureña de
+            entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la
+            costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado
+            consolidada que cubre toda la ciudad (aproximadamente 600km<sup>2</sup> de superficie).
+          </p>
+          <button type="button" class="  btn-hero active px-4 me-md-2 ">Conocé más</button>
+        </div>
+
 
       </div>
-    
-      <section class="row row justify-content-center">
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="imgs/steve.jpg" alt=""></a>
-            <div class="card-body">
-              <span class="badge text-bg-warning">Javascript</span>
-              <span class="badge text-bg-info" style="color:#fff !important;">React</span>
-              <h4 class="orador-title">
-                Steve Jobs
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis fugit corporis id. Blanditiis vitae dolores, amet tempora, est non qui aut provident obcaecati fuga quos odio labore eos soluta!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="imgs/bill.jpg" alt="Bill"></a>
-            <div class="card-body">
-              <span class="badge text-bg-warning">Javascript</span>
-              <span class="badge text-bg-info" style="color:#fff !important;">React</span>
-              <h4 class="orador-title">
-                Bill Gates
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis fugit corporis id. Blanditiis vitae dolores, amet tempora, est non qui aut provident obcaecati fuga quos odio labore eos soluta!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="imgs/ada.jpeg" alt="Ada"></a>
-            <div class="card-body">
-              <span class="badge text-bg-warning">Javascript</span>
-              <span class="badge text-bg-info" style="color:#fff !important;">React</span>
-              <h4 class="orador-title">
-                Ada Lovelace
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis fugit corporis id. Blanditiis vitae dolores, amet tempora, est non qui aut provident obcaecati fuga quos odio labore eos soluta!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /.row -->
-    </div>
+    </section>
+  </div>
 
-      <!-- Lugar y Fecha -->
-  <div id="lugar">
-    <div class="container-fluid">
-        <section class="row"> 
-          <div class="col-md-6 col-sm-12 bg-primario">
-            
-          
-        </div>
-            
-            <div class="col-md-6 col-sm-12 bg-secundario">
-              <h2 class="titular-lugar">
-                Bs AS - Octubre
-
-              </h2>
-
-              <p class="lead-lugar">
-                Buenos Aires es la provincia y localidad más grande del estado de Argentina. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600km<sup>2</sup> de superficie).
-                </p>
-                <button type="button" class="  btn-hero active px-4 me-md-2 ">Conocé más</button>
-            </div>
-
-
-        </section>
-    </div>
-    </div>
-
-  <!-- Form -->
+  <!-- Formulario -->
   <div class="container px-5 my-5" id="form">
-    <section class="row justify-content-center">
+    <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="card border-0 rounded-3 shadow-lg">
           <div class="card-body p-4">
             <div class="text-center">
               <span>CONVIERTETE EN</span>
               <div class="h1 fw-light">Orador</div>
-              <p class="mb-4 text-muted">Anotate como orador para una charla ignite. Cuéntanos de qué quieres hablar!</p>
+              <p class="mb-4 text-muted">Anotate como orador para una charla ignite. Cuéntanos de qué quieres hablar!
+              </p>
             </div>
 
-          
 
-            <form id="contactForm" >
 
-              <!-- Name Input -->
+            <form id="contactForm">
+
+              <!-- Inputs -->
               <div class="row">
                 <div class="col form-floating mb-3">
-                  <input class="form-control" id="nombre" type="text" placeholder="Nombre" data-sb-validations="required" />
-                    <label for="nombre">Nombre</label>
-                    <div class="invalid-feedback" data-sb-feedback="nombre:required">Nombre es requerido</div>
+                  <input class="form-control" id="nombre" type="text" placeholder="Nombre"
+                    data-sb-validations="required" />
+                  <label for="nombre">Nombre</label>
+                  <div class="invalid-feedback" data-sb-feedback="nombre:required">Nombre es requerido</div>
                 </div>
                 <div class="col form-floating mb-3">
-                  <input class="form-control" id="apellido" type="text" placeholder="Apellido" data-sb-validations="required" />
+                  <input class="form-control" id="apellido" type="text" placeholder="Apellido"
+                    data-sb-validations="required" />
                   <label for="apellido">Apellido</label>
                   <div class="invalid-feedback" data-sb-feedback="apellido:required">Apellido es requerido</div>
                 </div>
               </div>
 
-              <!-- Message Input -->
+              <!-- Mensaje-->
               <div class="form-floating mb-3">
-                <textarea class="form-control" id="message" type="text" placeholder="Mensaje" style="height: 10rem;" data-sb-validations="required"></textarea>
+                <textarea class="form-control" id="message" type="text" placeholder="Mensaje" style="height: 10rem;"
+                  data-sb-validations="required"></textarea>
                 <label for="message">Sobre qué quieres hablar?</label>
                 <div class="invalid-feedback" data-sb-feedback="message:required">Mensaje es requerido!</div>
               </div>
 
-              <!-- Submit button -->
+              <!-- Submit -->
               <div class="d-grid">
                 <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Enviar</button>
               </div>
@@ -357,25 +403,26 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 
-  <footer>
-    <div class="container-fluid bg-footer"> -->
-      <ul class="nav justify-content-center pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Preguntas frecuentes</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Contáctanos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Prensa</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Conferencias</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Términos y condiciones</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Privacidad</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Estudiantes</a></li>
-      </ul>
-    </div>
-</footer>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+<footer>
+  <div class="container-fluid bg-footer">
+    <ul class="nav justify-content-center pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Preguntas frecuentes</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Contáctanos</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Prensa</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Conferencias</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Términos y condiciones</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Privacidad</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-footer">Estudiantes</a></li>
+    </ul>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
