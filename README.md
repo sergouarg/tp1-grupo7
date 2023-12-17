@@ -1,3 +1,3 @@
-# Trabajo Practico Front
+# php-masters-g7
 
-DEJO el codigo para que el que quiera lo pueda usar como base para su trabajo practico.
+Trabajo práctico integrador - fullstack php - Comisión 23584
